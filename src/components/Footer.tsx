@@ -34,7 +34,7 @@ const Footer = () => {
             </p>
             <div className="flex gap-4">
               <a
-                href="https://www.tiktok.com"
+                href="https://www.tiktok.com/@importacionesmipandita"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white hover:bg-gray-200 transition-colors flex items-center justify-center text-black"
@@ -45,7 +45,7 @@ const Footer = () => {
                 </svg>
               </a>
               <a
-                href="https://www.instagram.com"
+                href="https://www.instagram.com/importacionesmipandita/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white hover:bg-gray-200 transition-colors flex items-center justify-center text-black"
@@ -54,7 +54,7 @@ const Footer = () => {
                 <Instagram size={20} />
               </a>
               <a
-                href="https://www.facebook.com"
+                href="https://www.facebook.com/importacionesmipandita"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white hover:bg-gray-200 transition-colors flex items-center justify-center text-black"
@@ -102,7 +102,7 @@ const Footer = () => {
             © {new Date().getFullYear()} Importaciones Mi Pandita. Todos los
             derechos reservados.
           </p>
-          <p className="mt-2">Lima, Perú 🇵🇪</p>
+          <p className="mt-2">Lima, Perú</p>
         </div>
       </div>
     </footer>

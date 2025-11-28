@@ -1,16 +1,13 @@
 import { useState } from "react";
 import ProductGallery from "./ProductGallery";
-import techImage from "@/assets/category-tech.jpg";
-import homeImage from "@/assets/category-home.jpg";
-import beautyImage from "@/assets/category-beauty.jpg";
-import petsImage from "@/assets/category-pets.jpg";
-import sportsImage from "@/assets/category-sports.jpg";
+import { Laptop, Home, Sparkles, Dog, Dumbbell, LucideIcon, ShoppingBag } from "lucide-react";
 
 export type Category = {
   id: string;
   name: string;
   image: string;
   description: string;
+  icon: LucideIcon;
 };
 
 const Products = () => {
@@ -20,32 +17,37 @@ const Products = () => {
     {
       id: "tecnologia",
       name: "Tecnología",
-      image: techImage,
-      description: "Gadgets y accesorios tecnológicos de última generación",
+      image: "/products/tech.jpg",
+      description: "Gadgets y accesorios de última generación",
+      icon: Laptop,
     },
     {
       id: "hogar",
       name: "Hogar",
-      image: homeImage,
+      image: "/products/hogar.jpg",
       description: "Artículos para decorar y organizar tu espacio",
+      icon: Home,
     },
     {
       id: "belleza",
       name: "Belleza",
-      image: beautyImage,
+      image: "/products/belleza.jpg",
       description: "Productos de cuidado personal y cosmética",
+      icon: Sparkles,
     },
     {
       id: "mascotas",
       name: "Mascotas",
-      image: petsImage,
-      description: "Accesorios y juguetes para tus compañeros peludos",
+      image: "/products/pets.jpg",
+      description: "Accesorios y juguetes para tus compañeros",
+      icon: Dog,
     },
     {
       id: "deporte",
-      name: "Deporte y Bienestar",
-      image: sportsImage,
+      name: "Deporte",
+      image: "/products/deporte.jpg",
       description: "Equipamiento para tu rutina de ejercicio",
+      icon: Dumbbell,
     },
   ];
 
@@ -54,11 +56,14 @@ const Products = () => {
       <section id="productos" className="section-spacing">
         <div className="max-w-7xl mx-auto container-padding">
           <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Nuestros Productos
-            </h2>
+            <div className="flex justify-center items-center gap-4 mb-6">
+              <ShoppingBag className="text-primary" size={48} />
+              <h2 className="text-4xl md:text-5xl font-bold">
+                Nuestros Productos
+              </h2>
+            </div>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Explora nuestras categorías de productos en tendencia
+              Explora nuestra selección de productos en tendencia
             </p>
           </div>
 
@@ -71,18 +76,21 @@ const Products = () => {
                 className="panda-card p-6 text-left group animate-fade-in w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.33%-1.5rem)]"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="aspect-square rounded-xl overflow-hidden mb-6 bg-panda-light">
+                <div className="aspect-square rounded-xl overflow-hidden mb-6 bg-secondary">
                   <img
                     src={category.image}
                     alt={category.name}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                 </div>
-                <h3 className="text-2xl font-bold mb-2">{category.name}</h3>
+                <div className="flex items-center gap-3 mb-2">
+                  <category.icon className="text-primary" size={24} />
+                  <h3 className="text-2xl font-bold">{category.name}</h3>
+                </div>
                 <p className="text-muted-foreground mb-4">
                   {category.description}
                 </p>
-                <span className="inline-flex items-center gap-2 font-semibold">
+                <span className="inline-flex items-center gap-2 font-semibold text-primary">
                   Ver productos
                   <span className="group-hover:translate-x-1 transition-transform">
                     →

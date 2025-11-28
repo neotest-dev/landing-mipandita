@@ -1,5 +1,4 @@
 import { Sparkles, TrendingUp, Package, Clock } from "lucide-react";
-import aboutImage from "@/assets/hero-products.jpg";
 
 const About = () => {
   const benefits = [
@@ -59,7 +58,7 @@ const About = () => {
           {/* Image and Schedule Composition */}
           <div className="relative h-[500px] lg:h-full animate-scale-in" style={{ animationDelay: "100ms" }}>
             <img
-              src={aboutImage}
+              src="/about.jpg"
               alt="Productos de importación"
               className="absolute inset-0 w-full h-full object-cover rounded-2xl"
             />

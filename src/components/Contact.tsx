@@ -2,7 +2,7 @@ import { Phone, Mail, MapPin, Facebook, Instagram } from "lucide-react";
 
 const Contact = () => {
   const whatsappMessage = encodeURIComponent(
-    "Hola, deseo más información sobre los productos."
+    "Hola, deseo obtener información actualizada sobre los productos y el stock disponible. ¿Me podrías brindar detalles?"
   );
 
   return (
@@ -72,7 +72,10 @@ const Contact = () => {
           </a>
 
           {/* Location Card */}
-          <div
+          <a
+            href="https://www.google.com/maps/place/Lima/data=!4m2!3m1!1s0x9105c5f619ee3ec7:0x14206cb9cc452e4a?sa=X&ved=1t:242&ictx=111"
+            target="_blank"
+            rel="noopener noreferrer"
             className="panda-card p-8 text-center group animate-fade-in"
             style={{ animationDelay: "300ms" }}
           >
@@ -83,8 +86,8 @@ const Contact = () => {
             <p className="text-muted-foreground mb-4">
               Nos encontramos en
             </p>
-            <p className="font-semibold">Lima, Perú 🇵🇪</p>
-          </div>
+            <p className="font-semibold">Lima, Perú</p>
+          </a>
         </div>
 
         {/* Social Media */}
@@ -92,7 +95,7 @@ const Contact = () => {
           <h3 className="text-2xl font-bold mb-6">Síguenos en Redes Sociales</h3>
           <div className="flex justify-center gap-6">
             <a
-              href="https://www.tiktok.com"
+              href="https://www.tiktok.com/@importacionesmipandita"
               target="_blank"
               rel="noopener noreferrer"
               className="w-16 h-16 rounded-full bg-secondary flex items-center justify-center hover:bg-accent hover:scale-110 transition-all"
@@ -103,7 +106,7 @@ const Contact = () => {
               </svg>
             </a>
             <a
-              href="https://www.instagram.com"
+              href="https://www.instagram.com/importacionesmipandita/"
               target="_blank"
               rel="noopener noreferrer"
               className="w-16 h-16 rounded-full bg-secondary flex items-center justify-center hover:bg-accent hover:scale-110 transition-all"
@@ -112,7 +115,7 @@ const Contact = () => {
               <Instagram size={28} />
             </a>
             <a
-              href="https://www.facebook.com"
+              href="https://www.facebook.com/importacionesmipandita"
               target="_blank"
               rel="noopener noreferrer"
               className="w-16 h-16 rounded-full bg-secondary flex items-center justify-center hover:bg-accent hover:scale-110 transition-all"

@@ -31,7 +31,7 @@ const Header = () => {
             className="flex items-center gap-2 text-xl md:text-2xl font-bold tracking-tight hover:opacity-80 transition-opacity"
           >
             <img src={logo} alt="Importaciones Mi Pandita Logo" className="h-10 w-10 md:h-12 md:w-12 object-contain" />
-            <span className="hidden sm:inline">Importaciones Mi Pandita</span>
+            <span className="hidden sm:inline">Mi Pandita</span>
           </button>
 
           {/* Desktop Navigation */}
@@ -50,7 +50,7 @@ const Header = () => {
           {/* Social Icons - Desktop */}
           <div className="hidden md:flex items-center gap-4">
             <a
-              href="https://www.tiktok.com"
+              href="https://www.tiktok.com/@importacionesmipandita"
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center hover:bg-accent transition-colors"
@@ -61,7 +61,7 @@ const Header = () => {
               </svg>
             </a>
             <a
-              href="https://www.instagram.com"
+              href="https://www.instagram.com/importacionesmipandita/"
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center hover:bg-accent transition-colors"
@@ -70,7 +70,7 @@ const Header = () => {
               <Instagram size={20} />
             </a>
             <a
-              href="https://www.facebook.com"
+              href="https://www.facebook.com/importacionesmipandita"
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center hover:bg-accent transition-colors"
@@ -105,7 +105,7 @@ const Header = () => {
               ))}
               <div className="flex gap-4 pt-4 border-t border-border">
                 <a
-                  href="https://www.tiktok.com"
+                  href="https://www.tiktok.com/@importacionesmipandita"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center hover:bg-accent transition-colors"
@@ -115,7 +115,7 @@ const Header = () => {
                   </svg>
                 </a>
                 <a
-                  href="https://www.instagram.com"
+                  href="https://www.instagram.com/importacionesmipandita/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center hover:bg-accent transition-colors"
@@ -123,7 +123,7 @@ const Header = () => {
                   <Instagram size={24} />
                 </a>
                 <a
-                  href="https://www.facebook.com"
+                  href="https://www.facebook.com/importacionesmipandita"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center hover:bg-accent transition-colors"
