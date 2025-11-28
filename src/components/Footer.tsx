@@ -1,4 +1,5 @@
 import { Facebook, Instagram } from "lucide-react";
+import logo from '/logo.png';
 
 const Footer = () => {
   const scrollToSection = (id: string) => {
@@ -16,15 +17,18 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-panda-dark text-panda-light border-t border-border">
+    <footer className="bg-black text-white border-t border-border">
       <div className="max-w-7xl mx-auto container-padding py-16">
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div className="md:col-span-2">
-            <h3 className="text-2xl font-bold mb-4">
-              🐼 Importaciones Mi Pandita
-            </h3>
-            <p className="text-panda-medium mb-6 max-w-md">
+            <div className="flex items-center gap-3 mb-4">
+              <img src={logo} alt="Importaciones Mi Pandita Logo" className="h-12 w-12 object-contain" />
+              <h3 className="text-2xl font-bold">
+                Importaciones Mi Pandita
+              </h3>
+            </div>
+            <p className="text-gray-400 mb-6 max-w-md">
               Productos de tendencia al mejor precio. Importación directa desde
               China a Lima, Perú.
             </p>
@@ -33,7 +37,7 @@ const Footer = () => {
                 href="https://www.tiktok.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-panda-medium hover:bg-panda-light transition-colors flex items-center justify-center"
+                className="w-10 h-10 rounded-full bg-white hover:bg-gray-200 transition-colors flex items-center justify-center text-black"
                 aria-label="TikTok"
               >
                 <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
@@ -44,7 +48,7 @@ const Footer = () => {
                 href="https://www.instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-panda-medium hover:bg-panda-light transition-colors flex items-center justify-center"
+                className="w-10 h-10 rounded-full bg-white hover:bg-gray-200 transition-colors flex items-center justify-center text-black"
                 aria-label="Instagram"
               >
                 <Instagram size={20} />
@@ -53,7 +57,7 @@ const Footer = () => {
                 href="https://www.facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-panda-medium hover:bg-panda-light transition-colors flex items-center justify-center"
+                className="w-10 h-10 rounded-full bg-white hover:bg-gray-200 transition-colors flex items-center justify-center text-black"
                 aria-label="Facebook"
               >
                 <Facebook size={20} />
@@ -69,7 +73,7 @@ const Footer = () => {
                 <li key={link.id}>
                   <button
                     onClick={() => scrollToSection(link.id)}
-                    className="text-panda-medium hover:text-panda-light transition-colors"
+                    className="text-gray-400 hover:text-white transition-colors"
                   >
                     {link.label}
                   </button>
@@ -81,19 +85,19 @@ const Footer = () => {
           {/* Schedule */}
           <div>
             <h4 className="font-bold text-lg mb-4">Horarios</h4>
-            <ul className="space-y-2 text-sm text-panda-medium">
+            <ul className="space-y-2 text-sm text-gray-400">
               <li>Lunes - Jueves</li>
-              <li className="font-semibold">10:00 a.m. - 6:00 p.m.</li>
+              <li className="font-semibold text-white">10:00 a.m. - 6:00 p.m.</li>
               <li className="mt-3">Viernes</li>
-              <li className="font-semibold">10:00 a.m. - 5:00 p.m.</li>
+              <li className="font-semibold text-white">10:00 a.m. - 5:00 p.m.</li>
               <li className="mt-3">Sábado - Domingo</li>
-              <li className="font-semibold">CERRADO</li>
+              <li className="font-semibold text-white">CERRADO</li>
             </ul>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-panda-medium text-center text-sm text-panda-medium">
+        <div className="pt-8 text-center text-sm text-gray-400">
           <p>
             © {new Date().getFullYear()} Importaciones Mi Pandita. Todos los
             derechos reservados.

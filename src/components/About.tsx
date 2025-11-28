@@ -1,21 +1,22 @@
 import { Sparkles, TrendingUp, Package, Clock } from "lucide-react";
+import aboutImage from "@/assets/hero-products.jpg";
 
 const About = () => {
   const benefits = [
     {
       icon: Sparkles,
       title: "Productos en Tendencia",
-      description: "Siempre actualizados con lo último del mercado internacional",
+      description: "Siempre actualizados con lo último del mercado.",
     },
     {
       icon: TrendingUp,
-      title: "Oportunidad de Emprendimiento",
-      description: "Genera ingresos desde casa con horarios flexibles",
+      title: "Oportunidad de Emprender",
+      description: "Genera ingresos con horarios flexibles.",
     },
     {
       icon: Package,
-      title: "Importación Directa",
-      description: "Traemos los productos directo desde China, sin intermediarios",
+      title: "Importación Directa y Confiable",
+      description: "Productos desde China, sin intermediarios.",
     },
   ];
 
@@ -26,70 +27,58 @@ const About = () => {
   ];
 
   return (
-    <section id="sobre-nosotros" className="section-spacing bg-panda-light">
+    <section id="sobre-nosotros" className="section-spacing bg-background">
       <div className="max-w-7xl mx-auto container-padding">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Sobre Nosotros</h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Somos una tienda virtual dedicada a la importación directa desde China. 
-            Donde puedes emprender y generar ingresos desde la comodidad de tu casa, 
-            con horarios flexibles y una amplia gama de productos en tendencia.
-          </p>
-        </div>
-
-        {/* Benefits Grid */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
-          {benefits.map((benefit, index) => (
-            <div
-              key={index}
-              className="panda-card p-8 text-center animate-fade-in"
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              <div className="w-20 h-20 rounded-full bg-primary mx-auto mb-6 flex items-center justify-center">
-                <benefit.icon className="text-primary-foreground" size={36} />
-              </div>
-              <h3 className="font-bold text-xl mb-3">{benefit.title}</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                {benefit.description}
-              </p>
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+          {/* Text Content Section */}
+          <div className="animate-fade-in">
+            <h2 className="text-5xl md:text-6xl font-bold leading-tight mb-6">
+              Tu puerta de entrada a las tendencias globales.
+            </h2>
+            <p className="text-lg text-muted-foreground mb-10 leading-relaxed">
+              Somos una tienda virtual dedicada a la importación directa desde China. 
+              Nuestra misión es democratizar el acceso a productos de calidad, 
+              brindando oportunidades de negocio a emprendedores peruanos.
+            </p>
+            
+            <div className="space-y-8">
+              {benefits.map((benefit) => (
+                <div key={benefit.title} className="flex items-start gap-5">
+                  <div className="flex-shrink-0 w-14 h-14 rounded-full bg-primary text-primary-foreground flex items-center justify-center">
+                    <benefit.icon size={28} />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-xl mb-1">{benefit.title}</h3>
+                    <p className="text-muted-foreground leading-relaxed">{benefit.description}</p>
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-
-        {/* Mission Statement */}
-        <div className="panda-card p-12 text-center mb-12 animate-fade-in bg-gradient-to-br from-panda-light to-background">
-          <h3 className="text-3xl font-bold mb-6">Nuestra Misión</h3>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Democratizar el acceso a productos de calidad internacional, 
-            brindando oportunidades de negocio a emprendedores peruanos y 
-            conectando las últimas tendencias del mercado asiático con nuestros clientes.
-          </p>
-        </div>
-
-        {/* Schedule Card */}
-        <div className="panda-card p-8 max-w-2xl mx-auto animate-fade-in">
-          <div className="flex items-center justify-center gap-3 mb-6">
-            <Clock size={32} />
-            <h3 className="text-2xl font-bold">Horarios de Atención</h3>
           </div>
-          <div className="space-y-4">
-            {schedules.map((schedule, index) => (
-              <div
-                key={index}
-                className="flex justify-between items-center py-3 border-b border-border last:border-0"
-              >
-                <span className="font-semibold">{schedule.days}</span>
-                <span
-                  className={
-                    schedule.isClosed
-                      ? "text-muted-foreground font-bold"
-                      : "text-foreground"
-                  }
-                >
-                  {schedule.hours}
-                </span>
+
+          {/* Image and Schedule Composition */}
+          <div className="relative h-[500px] lg:h-full animate-scale-in" style={{ animationDelay: "100ms" }}>
+            <img
+              src={aboutImage}
+              alt="Productos de importación"
+              className="absolute inset-0 w-full h-full object-cover rounded-2xl"
+            />
+            <div className="absolute bottom-4 left-4 right-4 p-6 rounded-xl bg-background/70 backdrop-blur-sm border border-border shadow-lg">
+              <div className="flex items-center gap-3 mb-4">
+                <Clock className="text-primary" size={24} />
+                <h3 className="text-xl font-bold">Horarios de Atención</h3>
               </div>
-            ))}
+              <ul className="space-y-2 text-sm">
+                {schedules.map((schedule) => (
+                  <li key={schedule.days} className="flex justify-between items-center">
+                    <span className="font-semibold">{schedule.days}</span>
+                    <span className={schedule.isClosed ? "text-muted-foreground font-bold" : "text-foreground"}>
+                      {schedule.hours}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </div>

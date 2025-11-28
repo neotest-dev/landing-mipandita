@@ -62,13 +62,13 @@ const Products = () => {
             </p>
           </div>
 
-          {/* Categories Grid */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Categories Container */}
+          <div className="flex flex-wrap justify-center gap-8">
             {categories.map((category, index) => (
               <button
                 key={category.id}
                 onClick={() => setSelectedCategory(category)}
-                className="panda-card p-6 text-left group animate-fade-in"
+                className="panda-card p-6 text-left group animate-fade-in w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.33%-1.5rem)]"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="aspect-square rounded-xl overflow-hidden mb-6 bg-panda-light">
@@ -93,14 +93,20 @@ const Products = () => {
           </div>
 
           {/* Info Banner */}
-          <div className="mt-16 panda-card p-8 text-center bg-panda-light animate-fade-in">
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              <span className="font-bold text-foreground">
-                📦 Nuestro stock rota constantemente,
-              </span>{" "}
-              por eso las imágenes son solo referenciales. Pregunta por WhatsApp
-              para ver disponibilidad actual.
-            </p>
+          <div className="mt-16 max-w-4xl mx-auto rounded-2xl p-8 bg-primary text-primary-foreground animate-fade-in">
+            <div className="flex flex-col md:flex-row items-center gap-8">
+              <div className="flex-shrink-0">
+                <div className="w-24 h-24 rounded-full bg-primary-foreground/10 flex items-center justify-center">
+                  <img src="/package.png" alt="Paquete" className="h-12 w-12 object-contain" />
+                </div>
+              </div>
+              <div className="text-center md:text-left">
+                <h3 className="text-2xl font-bold mb-2">Nuestro stock rota constantemente</h3>
+                <p className="text-lg text-primary-foreground/80 leading-relaxed">
+                  Las imágenes son solo referenciales. Te recomendamos preguntar por WhatsApp para confirmar la disponibilidad actual de los productos.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

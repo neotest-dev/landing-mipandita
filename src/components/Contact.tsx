@@ -1,4 +1,4 @@
-import { Phone, Mail, MessageCircle, MapPin, Facebook, Instagram } from "lucide-react";
+import { Phone, Mail, MapPin, Facebook, Instagram } from "lucide-react";
 
 const Contact = () => {
   const whatsappMessage = encodeURIComponent(
@@ -25,8 +25,10 @@ const Contact = () => {
             rel="noopener noreferrer"
             className="panda-card p-8 text-center group animate-fade-in"
           >
-            <div className="w-20 h-20 rounded-full bg-primary mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform">
-              <MessageCircle className="text-primary-foreground" size={36} />
+            <div 
+              className="w-20 h-20 rounded-full bg-primary mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform"
+            >
+              <img src="/whats.png" alt="WhatsApp" className="h-10 w-10 object-contain invert" />
             </div>
             <h3 className="font-bold text-xl mb-2">WhatsApp</h3>
             <p className="text-muted-foreground mb-4">
@@ -64,7 +66,7 @@ const Contact = () => {
             <p className="text-muted-foreground mb-4">
               Envíanos un mensaje
             </p>
-            <p className="font-semibold text-sm break-all">
+            <p className="font-semibold text-sm">
               importacionesmipandita@gmail.com
             </p>
           </a>

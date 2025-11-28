@@ -1,4 +1,3 @@
-import { MessageCircle } from "lucide-react";
 import heroImage from "@/assets/hero-products.jpg";
 
 const Hero = () => {
@@ -16,11 +15,7 @@ const Hero = () => {
           <div className="space-y-8 animate-fade-in">
             <div className="space-y-4">
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-                Productos de tendencia al{" "}
-                <span className="relative inline-block">
-                  mejor precio
-                  <div className="absolute bottom-2 left-0 w-full h-3 bg-panda-medium -z-10 rounded" />
-                </span>
+                Productos de tendencia al mejor precio{" "}
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground font-light">
                 Importación directa desde China a Lima, Perú
@@ -37,7 +32,11 @@ const Hero = () => {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 panda-button text-lg"
             >
-              <MessageCircle size={24} />
+              <img 
+                src="/whats.png" 
+                alt="WhatsApp" 
+                className="h-6 w-6 invert"
+              />
               Escríbenos por WhatsApp
             </a>
           </div>

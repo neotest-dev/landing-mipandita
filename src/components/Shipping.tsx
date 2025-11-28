@@ -1,61 +1,65 @@
 import { Truck } from "lucide-react";
 
 const Shipping = () => {
+  const shippingBenefits = [
+    {
+      icon: "/package.png",
+      title: "Empaque Seguro",
+      description: "Todos nuestros productos son cuidadosamente empacados para garantizar su protección.",
+    },
+    {
+      icon: "/peru.png",
+      title: "Cobertura Nacional",
+      description: "Llegamos a cada rincón del Perú, asegurando que recibas tu pedido estés donde estés.",
+    },
+    {
+      icon: "/clock.png",
+      title: "Envío Rápido",
+      description: "Nos comprometemos a gestionar tu envío con la mayor rapidez para que lo recibas a tiempo.",
+    },
+  ];
+
   return (
     <section id="envios" className="section-spacing bg-panda-light">
       <div className="max-w-7xl mx-auto container-padding">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12 animate-fade-in">
-            <div className="w-24 h-24 rounded-full bg-primary mx-auto mb-6 flex items-center justify-center">
-              <Truck className="text-primary-foreground" size={48} />
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Envíos Nacionales
-            </h2>
-            <p className="text-xl text-muted-foreground">
-              Realizamos envíos a nivel nacional por la agencia Shalom
-            </p>
+        {/* Section Header */}
+        <div className="text-center mb-16 animate-fade-in">
+          <div className="inline-block p-4 rounded-full bg-primary text-primary-foreground mb-4">
+            <Truck size={32} />
           </div>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">Envíos a Nivel Nacional</h2>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            Colaboramos con la agencia Shalom para garantizar que tus productos lleguen de manera segura y confiable a cualquier parte del país.
+          </p>
+        </div>
 
-          {/* Shalom Logo Placeholder */}
-          <div className="panda-card p-12 text-center animate-scale-in">
-            <div className="w-full max-w-md mx-auto aspect-[3/1] bg-panda-light rounded-xl flex items-center justify-center mb-6">
-              <div className="text-center">
-                <p className="text-6xl mb-4">🚚</p>
-                <p className="text-xl font-semibold text-muted-foreground">
-                  Logo de Agencia Shalom
-                </p>
-                <p className="text-sm text-muted-foreground mt-2">
-                  Espacio para el logo de la agencia
-                </p>
+        {/* Content Grid */}
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          {/* Benefits List */}
+          <div className="space-y-8 animate-fade-in" style={{ animationDelay: "100ms" }}>
+            {shippingBenefits.map((benefit) => (
+              <div key={benefit.title} className="flex items-start gap-5">
+                <div className="flex-shrink-0 w-14 h-14 rounded-full bg-background flex items-center justify-center shadow-sm">
+                  <img src={benefit.icon} alt={benefit.title} className="h-7 w-7 object-contain" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-xl mb-1">{benefit.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{benefit.description}</p>
+                </div>
               </div>
-            </div>
-            <p className="text-lg text-muted-foreground">
-              Envíos seguros y confiables a todo el Perú
-            </p>
+            ))}
           </div>
 
-          {/* Additional Info */}
-          <div className="mt-8 grid md:grid-cols-3 gap-6">
-            <div className="text-center p-6 animate-fade-in" style={{ animationDelay: "100ms" }}>
-              <p className="text-4xl mb-3">📦</p>
-              <h3 className="font-bold text-lg mb-2">Empaque Seguro</h3>
-              <p className="text-sm text-muted-foreground">
-                Todos los productos van protegidos
-              </p>
-            </div>
-            <div className="text-center p-6 animate-fade-in" style={{ animationDelay: "200ms" }}>
-              <p className="text-4xl mb-3">🇵🇪</p>
-              <h3 className="font-bold text-lg mb-2">Cobertura Nacional</h3>
-              <p className="text-sm text-muted-foreground">
-                Llegamos a todo el Perú
-              </p>
-            </div>
-            <div className="text-center p-6 animate-fade-in" style={{ animationDelay: "300ms" }}>
-              <p className="text-4xl mb-3">⏱️</p>
-              <h3 className="font-bold text-lg mb-2">Envío Rápido</h3>
-              <p className="text-sm text-muted-foreground">
-                Tiempos de entrega competitivos
+          {/* Shalom Logo Card */}
+          <div className="panda-card p-8 md:p-12 flex items-center justify-center animate-scale-in" style={{ animationDelay: "200ms" }}>
+            <div className="w-full max-w-sm mx-auto">
+              <img 
+                src="/shalom.png" 
+                alt="Logo de Agencia Shalom" 
+                className="w-full h-auto object-contain"
+              />
+              <p className="text-center text-muted-foreground mt-6 font-semibold text-lg">
+                Tu socio de confianza para envíos en todo el Perú.
               </p>
             </div>
           </div>

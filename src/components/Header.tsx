@@ -1,5 +1,6 @@
 import { Menu, X, Facebook, Instagram } from "lucide-react";
 import { useState } from "react";
+import logo from '/logo.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -27,9 +28,10 @@ const Header = () => {
           {/* Logo */}
           <button
             onClick={() => scrollToSection("inicio")}
-            className="text-2xl md:text-3xl font-bold tracking-tight hover:opacity-80 transition-opacity"
+            className="flex items-center gap-2 text-xl md:text-2xl font-bold tracking-tight hover:opacity-80 transition-opacity"
           >
-            🐼 Mi Pandita
+            <img src={logo} alt="Importaciones Mi Pandita Logo" className="h-10 w-10 md:h-12 md:w-12 object-contain" />
+            <span className="hidden sm:inline">Importaciones Mi Pandita</span>
           </button>
 
           {/* Desktop Navigation */}
