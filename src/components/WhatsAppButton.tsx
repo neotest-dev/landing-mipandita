@@ -2,7 +2,7 @@
 
 const WhatsAppButton = () => {
   // TODO: Reemplaza este número con tu número de WhatsApp, incluyendo el código de país sin el símbolo '+'.
-  const phoneNumber = "51987654321";
+  const phoneNumber = "51991840655";
   const message = "Hola, deseo obtener información actualizada sobre los productos y el stock disponible. ¿Me podrías brindar detalles?";
   
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
