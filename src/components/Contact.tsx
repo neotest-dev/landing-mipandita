@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Facebook, Instagram } from "lucide-react";
+import { Mail, MapPin, Facebook, Instagram } from "lucide-react";
 
 const Contact = () => {
   const whatsappMessage = encodeURIComponent(
@@ -17,7 +17,7 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {/* WhatsApp Card */}
           <a
             href={`https://wa.me/51991840655?text=${whatsappMessage}`}
@@ -33,22 +33,6 @@ const Contact = () => {
             <h3 className="font-bold text-xl mb-2">WhatsApp</h3>
             <p className="text-muted-foreground mb-4">
               Respuesta rápida y directa
-            </p>
-            <p className="font-semibold">991 840 655</p>
-          </a>
-
-          {/* Phone Card */}
-          <a
-            href="tel:+51991840655"
-            className="panda-card p-8 text-center group animate-fade-in"
-            style={{ animationDelay: "100ms" }}
-          >
-            <div className="w-20 h-20 rounded-full bg-primary mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform">
-              <Phone className="text-primary-foreground" size={36} />
-            </div>
-            <h3 className="font-bold text-xl mb-2">Teléfono</h3>
-            <p className="text-muted-foreground mb-4">
-              Llámanos directamente
             </p>
             <p className="font-semibold">991 840 655</p>
           </a>

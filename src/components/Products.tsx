@@ -1,6 +1,6 @@
 import { useState } from "react";
 import ProductGallery from "./ProductGallery";
-import { Laptop, Home, Sparkles, Dog, Dumbbell, LucideIcon, ShoppingBag } from "lucide-react";
+import { Laptop, Home, Sparkles, Dog, Dumbbell, LucideIcon, ShoppingBag, Leaf } from "lucide-react";
 
 export type Category = {
   id: string;
@@ -43,11 +43,11 @@ const Products = () => {
       icon: Dog,
     },
     {
-      id: "deporte",
-      name: "Deporte",
-      image: "/products/deporte.jpg",
-      description: "Equipamiento para tu rutina de ejercicio",
-      icon: Dumbbell,
+      id: "bienestar",
+      name: "Bienestar",
+      image: "/products/bienestar.jpeg",
+      description: "Lo necesario para tu comodidad",
+      icon: Leaf,
     },
   ];
 
